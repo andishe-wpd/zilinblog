@@ -101,3 +101,22 @@ This project follows a modular and scalable folder structure to organize the cod
   - **main.tsx**: The entry point of the React application.
 
 This folder structure helps to keep the codebase organized, promotes reusability, and makes it easier to navigate and maintain the project as it grows. Feel free to adapt this structure to suit your specific needs and preferences.
+
+
+## VS Code Extensions
+
+To enhance your development experience and maintain consistent coding standards, this project includes a set of recommended Visual Studio Code extensions. The extensions listed below are configured in the `.vscode` folder of this project:
+
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native)
+- [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+- [Auto Import](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport)
+- [VS Code Styled Components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
+- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+
+These extensions provide essential functionalities for linting, code formatting, React Native development, debugging, auto-importing modules, styling components, and Git integration.
+
+To make the most of these recommended extensions, open the project in Visual Studio Code, and if prompted, consider installing the recommended extensions. Alternatively, you can manually install them from the links provided above.
+
+Please note that while these extensions are recommended, you are free to use other extensions or adjust the configuration according to your preferences. Feel free to explore the rich VS Code extension ecosystem and customize your development environment to suit your needs.
