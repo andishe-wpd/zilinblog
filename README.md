@@ -39,6 +39,32 @@ We use Figma for design collaboration. Access the Figma project at [link to Figm
 
 For each task or feature, create a new branch based on the master branch. Ensure that the branch name is descriptive of the task or feature being worked on. Once the task is completed, create a pull request for code review and merging it back into the master branch.
 
+## Commit Strategy
+
+A consistent and well-structured commit strategy is essential for maintaining a clean and understandable project history. In this project, we follow an atomic commit strategy.
+
+### Atomic Commits
+
+Atomic commits involve breaking down changes into small, self-contained units of work. Each commit represents a single logical change or feature. By making commits atomic, we can achieve several benefits:
+
+- **Clarity**: Atomic commits make it easier to understand the purpose and intent of each change. Each commit focuses on a specific task, bug fix, or feature, providing clear and concise information.
+
+- **Revertibility**: If needed, atomic commits can be reverted or rolled back individually without affecting other unrelated changes. This allows for quick and precise undoing of specific modifications.
+
+- **Collaboration**: Atomic commits facilitate collaboration among team members. They make it easier to review, discuss, and merge changes, as each commit represents a coherent and manageable unit.
+
+- **Versioning**: Atomic commits align well with version control systems like Git. They provide a granular history of changes, allowing for easier tracking, branching, and merging.
+
+When making commits, aim to follow these guidelines:
+
+1. **Keep commits focused**: Each commit should have a clear purpose and represent a single logical change.
+
+2. **Use descriptive commit messages**: Write concise but informative commit messages that explain the change introduced by the commit.
+
+3. **Commit early and often**: Make commits as frequently as needed to capture incremental progress and ensure the project history remains manageable.
+
+By adhering to the atomic commit strategy and these guidelines, we can maintain a clean and organized project history, making it easier to understand, collaborate, and maintain the codebase.
+
 ## Folder Structure and Architecture
 
 This project follows a modular and scalable folder structure to organize the codebase effectively. Here's an overview of the folder structure:
