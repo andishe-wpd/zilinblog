@@ -8,8 +8,7 @@
 
     "paths": {
       "@components/*": ["./src/components/*"],
-      "@utils/*": ["./src/utils/*"]
-      // Add more aliases as needed
+      "@assets/*": ["./src/assets/*"]
     },
 
     /* Bundler mode */
