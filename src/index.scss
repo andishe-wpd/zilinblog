@@ -6,8 +6,12 @@
   .flex-wrap-between-center {
     @apply flex flex-wrap justify-between items-center;
   }
+  .gradient-glass-card {
+    @apply border-t border-t-[#ffffff7d] p-6 text-white flex-wrap-between-center bottom-0 left-0 right-0 h-[88px] backdrop-blur-[20px] bg-gradient-to-b from-[#d5d5d552] via-[#d5d5d577] to-[#d5d5d552];
+  }
+
   .custom-button {
-    @apply transition-all  inline-flex gap-2 items-center p-3 cursor-pointer font-medium text-secondary capitalize hover:bg-blue-50 rounded-md;
+    @apply transition-all  inline-flex gap-2 items-center cursor-pointer font-medium  capitalize hover:bg-blue-50 rounded-md;
   }
   .menu {
     @apply fixed top-0 right-0 w-64 h-full bg-white transition-transform duration-300 ease-in-out;
