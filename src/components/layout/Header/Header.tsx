@@ -4,7 +4,7 @@ import SearchIcon from '../../../assets/icons/SearchIcon'
 import IconImage from '@components/layout/Header/IconImage'
 const Header = () => {
   return (
-    <div className="py-4 px-8 border-b flex-wrap-between-center">
+    <header className="py-4 px-8 border-b flex-wrap-between-center">
       <Navbar />
       <div className="flex-wrap-between-center gap-4 max-w-[720px] w-full ">
         <CustomInput
@@ -14,7 +14,7 @@ const Header = () => {
         />
         <IconImage className="hidden lg:block" />
       </div>
-    </div>
+    </header>
   )
 }
 
