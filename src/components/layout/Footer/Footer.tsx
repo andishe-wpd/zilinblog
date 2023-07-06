@@ -1,7 +1,7 @@
 import Pagination from './Pagination'
 const Footer = () => {
   return (
-    <div className="pt-5 pb-6 border-t">
+    <footer className="pt-5 pb-6 border-t">
       <Pagination
         totalItems={10}
         itemsPerPage={1}
@@ -10,7 +10,7 @@ const Footer = () => {
           console.log('')
         }}
       />
-    </div>
+    </footer>
   )
 }
 

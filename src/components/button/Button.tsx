@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
 interface ButtonProps {
-  title: string | number
+  title?: string | number
   icon?: React.ReactNode
   className?: string
   isActive?: boolean
