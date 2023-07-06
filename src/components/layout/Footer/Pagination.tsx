@@ -68,7 +68,7 @@ const Pagination: React.FC<PaginationProps> = ({
               title={page}
               key={idx}
               onClickAction={onNextPage}
-              className={`inline-flex mx-1 ${
+              className={` mx-1 ${
                 currentPage === page ? 'bg-grey' : null
               }`}
             />
@@ -81,7 +81,7 @@ const Pagination: React.FC<PaginationProps> = ({
         onClickAction={onNextPage}
         disabled={currentPage === 1}
         className="flex-row-reverse"
-        icon={<ArrowIcon rotation={180} />}
+        icon={<ArrowIcon className='trasform rotate-180' />}
       />
     </div>
   )
