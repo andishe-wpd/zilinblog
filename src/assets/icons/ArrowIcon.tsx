@@ -3,17 +3,17 @@ import { FC } from 'react'
 interface ArrowIconInterface {
   fill?: string
   size?: number
-  rotation?: number
+  className?: string
 }
 
 const ArrowIcon: FC<ArrowIconInterface> = ({
   fill = 'none',
   size = 20,
-  rotation = 0,
+  className,
 }) => {
   return (
     <svg
-      className={`transform rotate-${rotation}`}
+      className={className}
       width={size}
       height={size}
       fill={fill}
