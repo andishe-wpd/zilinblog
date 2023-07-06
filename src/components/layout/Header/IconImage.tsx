@@ -1,7 +1,8 @@
 import avatarPng from '@assets/pictures/Avatar.png'
-const IconImage = () => {
+import { FC } from 'react'
+const IconImage: FC<{ className?: string }> = ({ className }) => {
   return (
-    <div className="hidden sm:block">
+    <div className={className}>
       <img src={avatarPng} />
     </div>
   )
