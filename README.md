@@ -109,10 +109,8 @@ To enhance your development experience and maintain consistent coding standards,
 
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native)
 - [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
 - [Auto Import](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport)
-- [VS Code Styled Components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
 These extensions provide essential functionalities for linting, code formatting, React Native development, debugging, auto-importing modules, styling components, and Git integration.
