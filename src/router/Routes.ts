@@ -4,7 +4,14 @@ const LazyDashboard = React.lazy(() => import('../pages/Dashboard'))
 const LazyProjects = React.lazy(() => import('../pages/Projects'))
 const LazyNotFound = React.lazy(() => import('../pages/NotFound'))
 
-const routes = [
+interface RouteConfig {
+  path?: string
+  name?: string
+  Component: React.LazyExoticComponent<React.FC>
+  exact?: boolean
+}
+
+const routes: RouteConfig[] = [
   {
     path: '/',
     name: 'Home',

@@ -1,19 +1,40 @@
-import Button from '@components/button/Button'
 import BrandIcon from '@assets/icons/BrandIcon'
-import { NAVBARITEMS } from '../../../constant/NAVBARITEMS'
 import HamburgerIcon from '@assets/icons/HamburgerIcon'
+import Button from '@components/button/Button'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { NAVBARITEMS } from '../../../constant/NAVBARITEMS'
+import SideMenu from './SideMenu '
 const Navbar = () => {
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false)
+  const navigate = useNavigate()
+  const handleHamburgerClick = () => {
+    setIsSideMenuOpen(!isSideMenuOpen)
+  }
   return (
     <div className="flex gap-4 items-center justify-between flex-wrap w-full sm:w-auto my-4 sm:my-auto">
-      <BrandIcon />
+      <div className="cursor-pointer" onClick={() => navigate('/')}>
+        <BrandIcon />
+      </div>
       <div className="hidden sm:flex">
         {NAVBARITEMS.map(itm => (
-          <Button title={itm} key={itm} />
+          <Button
+            title={itm.title}
+            key={itm.title}
+            onClickAction={() => navigate(itm.path)}
+          />
         ))}
       </div>
-      <div className="block sm:hidden">
+      <div
+        className="block sm:hidden cursor-pointer"
+        onClick={handleHamburgerClick}
+      >
         <HamburgerIcon />
       </div>
+      <SideMenu
+        isOpen={isSideMenuOpen}
+        onClose={() => setIsSideMenuOpen(false)}
+      />
     </div>
   )
 }
