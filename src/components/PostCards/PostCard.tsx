@@ -3,7 +3,7 @@ import samplepost from '/samplepost.png'
 import ArrowIcon from '@assets/icons/ArrowIcon'
 const PostCard = () => {
   return (
-    <div className="max-w-[326px]">
+    <div className="max-w-[326px] mx-auto">
       <div className="relative ">
         <img src={samplepost} alt="" />
         <div className="absolute gradient-glass-card ">
