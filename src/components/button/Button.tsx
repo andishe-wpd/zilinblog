@@ -1,11 +1,12 @@
 import { FC } from 'react'
 
 interface ButtonProps {
-  title: string
+  title: string | number
   icon?: React.ReactNode
   className?: string
   isActive?: boolean
   onClickAction?: () => void
+  disabled?: boolean
 }
 
 const Button: FC<ButtonProps> = ({
@@ -14,12 +15,13 @@ const Button: FC<ButtonProps> = ({
   className,
   isActive = false,
   onClickAction,
+  disabled = false,
 }) => {
   return (
     <div
-      className={`p-3 cursor-pointer font-medium text-secondary capitalize hover:bg-blue-50 rounded-md ${className} ${
+      className={` transition-all flex gap-2 items-center p-3 cursor-pointer font-medium text-secondary capitalize hover:bg-blue-50 rounded-md ${className} ${
         isActive ? 'text-primary bg-blue-50' : null
-      }`}
+      } ${disabled ? 'cursor-not-allowed' : null}`}
       onClick={() => {
         if (onClickAction) onClickAction()
       }}
