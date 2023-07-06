@@ -22,6 +22,7 @@ const Navbar = () => {
             title={itm.title}
             key={itm.title}
             onClickAction={() => navigate(itm.path)}
+            className="text-secondary"
           />
         ))}
       </div>
