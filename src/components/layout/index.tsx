@@ -9,8 +9,10 @@ const Layout: FC<WrapperProps> = ({ children }) => {
   return (
     <>
       <Header />
-      <div className='min-h-[80vh]'>{children}</div>
-      <Footer />
+      <div className='mx-8'>
+        <div className="min-h-[80vh]">{children}</div>
+        <Footer />
+      </div>
     </>
   )
 }
