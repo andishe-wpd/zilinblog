@@ -1,6 +1,6 @@
 # Digi Task
 
-his is a frontend project built with React using TypeScript. It follows best practices and utilizes modern tools and libraries such as ESLint for code linting, Atomic Design for component organization, Yarn as the package manager, Vite as the build tool, and integrates with Figma for design collaboration.
+his is a frontend project built with React using TypeScript. It follows best practices and utilizes modern tools and libraries such as ESLint for code linting, Atomic Design for component organization, Yarn as the package manager, Vite as the build tool, and Figma for design collaboration.
 
 ## Prerequisites
 
