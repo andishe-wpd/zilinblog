@@ -19,7 +19,7 @@ const Button: FC<ButtonProps> = ({
 }) => {
   return (
     <div
-      className={`custom-button ${className} ${
+      className={`custom-button p-3 ${className} ${
         isActive ? 'text-primary bg-blue-50' : null
       } ${disabled ? 'cursor-not-allowed' : null}`}
       onClick={() => {
