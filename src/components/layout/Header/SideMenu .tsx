@@ -18,18 +18,20 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
   return (
     <>
       <div
-        className={`backdrop ${isOpen ? 'isOpen' : 'isClosed'}`}
+        className={`backdrop  backdrop-blur-[5px] z-40 ${
+          isOpen ? 'isOpen' : 'isClosed'
+        }`}
         onClick={onClose}
-        style={{ backdropFilter: 'blur(5px)' }}
       />
       <div
-        className={`menu ${isOpen ? 'isOpen' : 'isClosed'} py-8 px-4`}
+        className={`menu z-50 ${isOpen ? 'isOpen' : 'isClosed'} py-8 px-4`}
         onClick={onClose}
       >
         <div className="flex-wrap-between-center">
-          <div className="cursor-pointer py-2" onClick={() => navigate('/')}>
-            <BrandIcon />
-          </div>
+          <BrandIcon
+            className="cursor-pointer py-2"
+            onClick={() => navigate('/')}
+          />
           <IconImage />
         </div>
         {NAVBARITEMS.map((item: NavbarItem) => (

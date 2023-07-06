@@ -30,7 +30,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
 
   return (
     <div
-      className={`border py-3 px-4 rounded-lg flex gap-2 ${className}`}
+      className={`border py-3 px-4 rounded-lg flex gap-2 cursor-pointer ${className} hover:border-black transition-all`}
       onClick={handleDivClick}
     >
       {icon && icon}
@@ -39,7 +39,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
           type="text"
           ref={inputRef}
           placeholder={placeholder}
-          className="focus:outline-none"
+          className="focus:outline-none cursor-pointer"
         />
       </form>
     </div>
