@@ -12,7 +12,7 @@ const Navbar = () => {
     setIsSideMenuOpen(!isSideMenuOpen)
   }
   return (
-    <div className="flex gap-4 items-center justify-between flex-wrap w-full sm:w-auto my-4 sm:my-auto">
+    <div className="flex-wrap-between-center gap-4 w-full sm:w-auto my-4 sm:my-auto">
       <div className="cursor-pointer" onClick={() => navigate('/')}>
         <BrandIcon />
       </div>
