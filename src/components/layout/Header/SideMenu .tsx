@@ -23,7 +23,7 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
         }`}
         onClick={onClose}
       />
-      <div
+      <aside
         className={`menu z-50 ${isOpen ? 'isOpen' : 'isClosed'} py-8 px-4`}
         onClick={onClose}
       >
@@ -43,7 +43,7 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
             {item.title}
           </a>
         ))}
-      </div>
+      </aside>
     </>
   )
 }
