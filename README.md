@@ -1,6 +1,6 @@
 # Digi Task
 
-his is a frontend project built with React using TypeScript. It follows best practices and utilizes modern tools and libraries such as ESLint for code linting, Atomic Design for component organization, Yarn as the package manager, Vite as the build tool, and integrates with Figma for design collaboration.
+his is a frontend project built with React using TypeScript. It follows best practices and utilizes modern tools and libraries such as ESLint for code linting, Atomic Design for component organization, Yarn as the package manager, Vite as the build tool, and Figma for design collaboration.
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ Before you begin, ensure you have the following installed:
 
 To start the development server, run the following command:
 yarn dev
-This will launch the application in development mode. Open http://localhost:3000 in your browser to view it.
+This will launch the application in development mode. Open http://localhost:5173 in your browser to view it.
 
 ## Building the Project
 
@@ -109,10 +109,8 @@ To enhance your development experience and maintain consistent coding standards,
 
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native)
 - [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
 - [Auto Import](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport)
-- [VS Code Styled Components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
 These extensions provide essential functionalities for linting, code formatting, React Native development, debugging, auto-importing modules, styling components, and Git integration.
