@@ -26,7 +26,7 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
         className={`menu ${isOpen ? 'isOpen' : 'isClosed'} py-8 px-4`}
         onClick={onClose}
       >
-        <div className="flex flex-wrap justify-between items-center">
+        <div className="flex-wrap-between-center">
           <div className="cursor-pointer py-2" onClick={() => navigate('/')}>
             <BrandIcon />
           </div>

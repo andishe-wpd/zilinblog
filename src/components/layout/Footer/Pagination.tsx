@@ -49,7 +49,7 @@ const Pagination: React.FC<PaginationProps> = ({
   }, [totalPages, currentPage, onPageChange])
 
   return (
-    <div className="flex flex-wrap items-center justify-between">
+    <div className="flex-wrap-between-center">
       <Button
         title="Previous"
         // className="mx-2 p-2 bg-blue-500 text-white rounded"
@@ -68,9 +68,7 @@ const Pagination: React.FC<PaginationProps> = ({
               title={page}
               key={idx}
               onClickAction={onNextPage}
-              className={` mx-1 ${
-                currentPage === page ? 'bg-grey' : null
-              }`}
+              className={` mx-1 ${currentPage === page ? 'bg-grey' : null}`}
             />
           ),
         )}
@@ -81,7 +79,7 @@ const Pagination: React.FC<PaginationProps> = ({
         onClickAction={onNextPage}
         disabled={currentPage === 1}
         className="flex-row-reverse"
-        icon={<ArrowIcon className='trasform rotate-180' />}
+        icon={<ArrowIcon className="trasform rotate-180" />}
       />
     </div>
   )

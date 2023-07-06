@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer utilities {
+  .flex-wrap-between-center {
+    @apply flex flex-wrap justify-between items-center;
+  }
   .custom-button {
     @apply transition-all  inline-flex gap-2 items-center p-3 cursor-pointer font-medium text-secondary capitalize hover:bg-blue-50 rounded-md;
   }
