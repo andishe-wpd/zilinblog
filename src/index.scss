@@ -2,13 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer utilities {
   .custom-button {
-    @apply bg-blue-500 text-red-800 px-4 py-2 rounded;
-    /* Add your custom styles */
-    /* For example: */
-    font-weight: bold;
-    box-shadow: 2px 2px 4px rgba(212, 0, 0, 0.2);
+    @apply transition-all  inline-flex gap-2 items-center p-3 cursor-pointer font-medium text-secondary capitalize hover:bg-blue-50 rounded-md;
   }
 }
