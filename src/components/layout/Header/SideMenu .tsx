@@ -27,9 +27,10 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
         onClick={onClose}
       >
         <div className="flex-wrap-between-center">
-          <div className="cursor-pointer py-2" onClick={() => navigate('/')}>
-            <BrandIcon />
-          </div>
+          <BrandIcon
+            className="cursor-pointer py-2"
+            onClick={() => navigate('/')}
+          />
           <IconImage />
         </div>
         {NAVBARITEMS.map((item: NavbarItem) => (
