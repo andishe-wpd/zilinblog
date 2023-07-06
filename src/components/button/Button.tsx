@@ -19,7 +19,7 @@ const Button: FC<ButtonProps> = ({
 }) => {
   return (
     <div
-      className={` transition-all flex gap-2 items-center p-3 cursor-pointer font-medium text-secondary capitalize hover:bg-blue-50 rounded-md ${className} ${
+      className={`custom-button ${className} ${
         isActive ? 'text-primary bg-blue-50' : null
       } ${disabled ? 'cursor-not-allowed' : null}`}
       onClick={() => {
