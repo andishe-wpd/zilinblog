@@ -1,14 +1,5 @@
 import { FC } from 'react'
-
-interface ButtonProps {
-  title?: string | number
-  icon?: React.ReactNode
-  className?: string
-  isActive?: boolean
-  onClickAction?: () => void
-  disabled?: boolean
-}
-
+import { ButtonProps } from '../../interfaces/ButtonProps'
 const Button: FC<ButtonProps> = ({
   title,
   icon,

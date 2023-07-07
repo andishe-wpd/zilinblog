@@ -2,12 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react'
 import Button from '@components/button/Button'
 import ArrowIcon from '@assets/icons/ArrowIcon'
 import { useNavigate } from 'react-router-dom'
-interface PaginationProps {
-  totalItems: number
-  itemsPerPage: number
-  currentPage: number
-  onPageChange: (page: number) => void
-}
+import { PaginationProps } from '../../../interfaces/PaginationProps'
 
 const Pagination: React.FC<PaginationProps> = ({
   totalItems,

@@ -2,11 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import ReactDOM from 'react-dom'
 import Button from '@components/button/Button'
 import CloseIcon from '@assets/icons/CloseIcon'
-interface ModalProps {
-  isOpen: boolean
-  onClose: () => void
-  children: React.ReactNode
-}
+import { ModalProps } from '../../interfaces/ModalProps'
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   const [isAnimating, setIsAnimating] = useState(false)
