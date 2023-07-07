@@ -7,6 +7,7 @@ export default {
         base: '#101828',
         primary: '#175CD3',
         secondary: '#344054',
+        textSecondary: '#667085',
         grey: '#EAECF0',
       },
       rotate: {
