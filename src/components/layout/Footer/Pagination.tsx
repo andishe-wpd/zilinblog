@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import Button from '@components/button/Button'
 import ArrowIcon from '@assets/icons/ArrowIcon'
+import { useNavigate } from 'react-router-dom'
 interface PaginationProps {
   totalItems: number
   itemsPerPage: number
@@ -15,6 +16,7 @@ const Pagination: React.FC<PaginationProps> = ({
   onPageChange,
 }) => {
   const [pages, setPages] = useState<number[]>([])
+  const navigate = useNavigate()
 
   const totalPages = Math.ceil(totalItems / itemsPerPage)
 
@@ -48,6 +50,13 @@ const Pagination: React.FC<PaginationProps> = ({
     onPageChange(Math.min(totalPages, currentPage + 1))
   }, [totalPages, currentPage, onPageChange])
 
+  const navigatePage = (page: number) => {
+    navigate('/' + page)
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
   return (
     <div className="flex-wrap-between-center">
       <Button
@@ -67,8 +76,10 @@ const Pagination: React.FC<PaginationProps> = ({
             <Button
               title={page}
               key={idx}
-              onClickAction={onNextPage}
-              className={` mx-1 text-secondary ${currentPage === page ? 'bg-grey' : null}`}
+              onClickAction={() => navigatePage(page)}
+              className={` mx-1 text-secondary ${
+                currentPage === page ? 'bg-grey' : null
+              }`}
             />
           ),
         )}
