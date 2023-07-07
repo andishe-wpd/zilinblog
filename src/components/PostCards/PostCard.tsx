@@ -21,10 +21,10 @@ const PostCard = () => {
       </figure>
       <div className="py-8">
         <div className="font-semibold text-2xl">Building your API Stack</div>
-        <summary className="text-textSecondary">
+        <div className="text-textSecondary">
           The rise of RESTful APIs has been met by a rise in tools for creating,
           testing, and managing them.
-        </summary>
+        </div>
       </div>
       <Button
         title={'Read post'}
