@@ -1,16 +1,10 @@
 import { FC } from 'react'
 
-interface ArrowIconInterface {
+const ArrowIcon: FC<{
   stroke?: string
   size?: number
   className?: string
-}
-
-const ArrowIcon: FC<ArrowIconInterface> = ({
-  stroke = '#667085',
-  size = 20,
-  className,
-}) => {
+}> = ({ stroke = '#667085', size = 20, className }) => {
   return (
     <svg
       className={className}

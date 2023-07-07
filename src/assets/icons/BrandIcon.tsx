@@ -2,11 +2,10 @@
 // to improve performance and reliability.
 
 import { FC } from 'react'
-interface BrandIconInterface {
+const BrandIcon: FC<{
   className?: string
   onClick?: () => void
-}
-const BrandIcon: FC<BrandIconInterface> = ({ className, onClick }) => {
+}> = ({ className, onClick }) => {
   return (
     <div className={className} onClick={onClick}>
       <svg

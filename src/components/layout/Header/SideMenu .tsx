@@ -1,17 +1,10 @@
 import { FC } from 'react'
-import { NAVBARITEMS } from '../../../constant/NAVBARITEMS'
+import { navBarItems } from '../../../constants/navBarItems'
 import BrandIcon from '@assets/icons/BrandIcon'
 import { useNavigate } from 'react-router-dom'
 import IconImage from './IconImage'
-interface NavbarItem {
-  title: string
-  path: string
-}
-
-interface SideMenuProps {
-  isOpen: boolean
-  onClose: () => void
-}
+import { SideMenuProps } from '@interfaces/SideMenuProps'
+import { NavbarItem } from '@interfaces/NavbarItem'
 
 const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
   const navigate = useNavigate()
@@ -34,7 +27,7 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
           />
           <IconImage />
         </div>
-        {NAVBARITEMS.map((item: NavbarItem) => (
+        {navBarItems.map((item: NavbarItem) => (
           <a
             href={item.path}
             key={item.title}

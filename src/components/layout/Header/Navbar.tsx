@@ -3,7 +3,7 @@ import HamburgerIcon from '@assets/icons/HamburgerIcon'
 import Button from '@components/button/Button'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { NAVBARITEMS } from '../../../constant/NAVBARITEMS'
+import { navBarItems } from '../../../constants/navBarItems'
 import SideMenu from './SideMenu '
 const Navbar = () => {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false)
@@ -17,7 +17,7 @@ const Navbar = () => {
         <BrandIcon />
       </div>
       <div className="hidden sm:flex">
-        {NAVBARITEMS.map(itm => (
+        {navBarItems.map(itm => (
           <Button
             title={itm.title}
             key={itm.title}

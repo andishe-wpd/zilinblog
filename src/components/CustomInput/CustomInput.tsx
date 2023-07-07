@@ -1,11 +1,5 @@
-import React, { ReactNode, useRef } from 'react'
-
-interface CustomInputProps {
-  icon?: ReactNode
-  placeholder?: string
-  onEnter?: () => void
-  className?: string
-}
+import React, { useRef } from 'react'
+import { CustomInputProps } from '@interfaces/CustomInputProps'
 const CustomInput: React.FC<CustomInputProps> = ({
   icon,
   placeholder,
