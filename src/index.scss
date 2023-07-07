@@ -7,7 +7,7 @@
     @apply flex flex-wrap justify-between items-center;
   }
   .gradient-glass-card {
-    @apply border-t border-t-[#ffffff7d] p-6 text-white flex-wrap-between-center bottom-0 left-0 right-0 h-[88px] backdrop-blur-[10px] bg-gradient-to-b from-[#d5d5d552] via-[#d5d5d577] to-[#d5d5d552];
+    @apply border-t border-t-[#ffffff7d] p-6 text-white flex  justify-between items-center bottom-0 left-0 right-0 h-[88px] backdrop-blur-[10px] bg-gradient-to-b from-[#d5d5d552] via-[#d5d5d577] to-[#d5d5d552];
   }
 
   .custom-button {
@@ -40,7 +40,7 @@
 * {
   /* Firefox */
   scrollbar-width: thin;
-  scrollbar-color: rgba(101, 112, 133 , 0.5) rgba(0, 0, 0, 0.1);
+  scrollbar-color: rgba(101, 112, 133, 0.5) rgba(0, 0, 0, 0.1);
 }
 
 /* Chrome, Edge, and Safari */
@@ -54,7 +54,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgb(101, 112, 133 , 0.5);
+  background-color: rgb(101, 112, 133, 0.5);
   border-radius: 10px;
   border: 3px solid gba(217, 227, 255, 0.7);
 }
