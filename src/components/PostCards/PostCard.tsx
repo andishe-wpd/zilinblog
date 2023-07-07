@@ -2,40 +2,40 @@ import Button from '@components/button/Button'
 import samplepost from '/samplepost.png'
 import ArrowIcon from '@assets/icons/ArrowIcon'
 import { useNavigate, useParams } from 'react-router-dom'
+import Link from '@components/link/Link'
 const PostCard = () => {
   const navigate = useNavigate()
   const params = useParams()
+
   return (
-    <>
-      <div className="max-w-[326px] mx-auto">
-        <div className="relative ">
-          <img src={samplepost} alt="" />
-          <div className="absolute gradient-glass-card ">
-            <div className="flex flex-col text-sm	">
-              <span className="font-semibold">Lana Steiner</span>
-              <span>18 Jan 2022</span>
-            </div>
-            <span className="font-semibold">Developer</span>
+    <section className="max-w-[326px] mx-auto">
+      <figure className="relative">
+        <img src={samplepost} alt="" />
+        <div className="absolute gradient-glass-card">
+          <div className="flex flex-col text-sm">
+            <span className="font-semibold">Lana Steiner</span>
+            <span>18 Jan 2022</span>
           </div>
+          <span className="font-semibold">Developer</span>
         </div>
-        <div className="py-8 ">
-          <div className=" font-semibold text-2xl">
-            {' '}
-            Building your API Stack
-          </div>
-          <div className="text-[#667085]">
-            The rise of RESTful APIs has been met by a rise in tools for
-            creating, testing, and managing them.
-          </div>
+      </figure>
+      <div className="py-8">
+        <div className="font-semibold text-2xl">Building your API Stack</div>
+        <div className="text-textSecondary">
+          The rise of RESTful APIs has been met by a rise in tools for creating,
+          testing, and managing them.
         </div>
-        <Button
-          title={'Read post'}
-          className="flex-row-reverse text-primary hover:bg-transparent"
-          icon={<ArrowIcon className="tranform rotate-135" stroke="#175CD3" />}
-          onClickAction={() => navigate('/' + (params?.page || '1') + '/5')}
-        />
       </div>
-    </>
+      <Link
+        to={'/' + (params?.page || '1') + '/5'}
+        className="text-primary font-semibold"
+      >
+        <div className="flex gap-2 items-center">
+          Read post
+          <ArrowIcon className="transform rotate-135" stroke="#175CD3" />
+        </div>
+      </Link>
+    </section>
   )
 }
 
