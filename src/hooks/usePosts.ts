@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import APIClient from '../services/api-client'
-import { PostResponse } from '../interfaces/PostResponse'
+import { PostResponse } from '@interfaces/PostResponse'
 
 const apiClient = new APIClient<PostResponse>('/posts')
 

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { CustomInputProps } from '../../interfaces/CustomInputProps'
+import { CustomInputProps } from '@interfaces/CustomInputProps'
 const CustomInput: React.FC<CustomInputProps> = ({
   icon,
   placeholder,

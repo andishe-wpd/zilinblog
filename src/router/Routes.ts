@@ -1,5 +1,5 @@
 import React from 'react'
-import { RouteConfig } from '../interfaces/RouteConfig'
+import { RouteConfig } from '@interfaces/RouteConfig'
 const LazyHome = React.lazy(() => import('../pages/Home'))
 const LazyDashboard = React.lazy(() => import('../pages/Dashboard'))
 const LazyProjects = React.lazy(() => import('../pages/Projects'))

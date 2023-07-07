@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react'
 import { Link as RouterLink } from 'react-router-dom'
-import { LinkProps } from '../../interfaces/LinkProps'
+import { LinkProps } from '@interfaces/LinkProps'
 
 const Link: FC<LinkProps> = ({ className, children, ...rest }) => {
   return (

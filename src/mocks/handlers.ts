@@ -1,7 +1,7 @@
 // mocks/handlers.ts
 import { rest } from 'msw'
 import { faker } from '@faker-js/faker'
-import { Post } from '../interfaces/Post'
+import { Post } from '@interfaces/Post'
 
 const generatePosts = (count: number): Post[] => {
   const posts: Post[] = []

@@ -1,12 +1,10 @@
-import Button from '@components/button/Button'
-import samplepost from '/samplepost.png'
 import ArrowIcon from '@assets/icons/ArrowIcon'
-import { useNavigate, useParams } from 'react-router-dom'
-import Link from '@components/link/Link'
-import { FC } from 'react'
-import SpokenDate from '@components/utils/SpokenDate'
 import LazyLoadImage from '@components/lazyLoadImage/lazyLoadImage'
-import { Post } from '../../interfaces/Post'
+import Link from '@components/link/Link'
+import SpokenDate from '@components/utils/SpokenDate'
+import { Post } from '@interfaces/Post'
+import { FC } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const PostCard: FC<Post> = ({
   title,

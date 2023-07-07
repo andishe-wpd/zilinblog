@@ -3,8 +3,8 @@ import { navBarItems } from '../../../constants/navBarItems'
 import BrandIcon from '@assets/icons/BrandIcon'
 import { useNavigate } from 'react-router-dom'
 import IconImage from './IconImage'
-import { SideMenuProps } from '../../../interfaces/SideMenuProps'
-import { NavbarItem } from '../../../interfaces/NavbarItem'
+import { SideMenuProps } from '@interfaces/SideMenuProps'
+import { NavbarItem } from '@interfaces/NavbarItem'
 
 const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
   const navigate = useNavigate()
