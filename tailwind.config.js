@@ -3,6 +3,7 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      objectFit: ['cover', 'contain'],
       colors: {
         base: '#101828',
         primary: '#175CD3',
