@@ -17,34 +17,37 @@ const PostCardDetail = () => {
         </div>
       </div>
 
-      <div className="  lg:w-4/12 xl:w-1/3 md:max-w-[384px] rounded-r-lg m-6 max-h-[646px] p-2 overflow-x-auto">
+      <div className="  lg:w-4/12 xl:w-1/3 md:max-w-[384px] rounded-r-lg m-6 ">
         <div className="font-bold text-2xl pb-3">Building your API Stack</div>
-        The rise of RESTful APIs has been met by a rise in tools for creating,
-        testing, and managing them.The rise of RESTful APIs has been met by a
-        rise in tools for creating, testing, and managing them.The rise of
-        RESTful APIs has been met by a rise in tools for creating, testing, and
-        managing them.The rise of RESTful APIs has been met by a rise in tools
-        for creating, testing, and managing them.The rise of RESTful APIs has
-        been met by a rise in tools for creating, testing, and managing them.The
-        rise of RESTful APIs has been met by a rise in tools for creating,
-        testing, and managing them.The rise of RESTful APIs has been met by a
-        testing, and managing them.The rise of RESTful APIs has been met by a
-        rise in tools for creating, testing, and managing them.The rise of
-        RESTful APIs has been met by a rise in tools for creating, testing, and
-        managing them.The rise of RESTful APIs has been met by a rise in tools
-        for creating, testing, and managing them.The rise of RESTful APIs has
-        been met by a rise in tools for creating, testing, and managing them.The
-        rise of RESTful APIs has been met by a rise in tools for creating,
-        testing, and managing them.The rise of RESTful APIs has been met by a
-        testing, and managing them.The rise of RESTful APIs has been met by a
-        rise in tools for creating, testing, and managing them.The rise of
-        RESTful APIs has been met by a rise in tools for creating, testing, and
-        managing them.The rise of RESTful APIs has been met by a rise in tools
-        for creating, testing, and managing them.The rise of RESTful APIs has
-        been met by a rise in tools for creating, testing, and managing them.The
-        rise of RESTful APIs has been met by a rise in tools for creating,
-        testing, and managing them.The rise of RESTful APIs has been met by a
-        rise in tools for creating, testing, and
+        <div className="max-h-[646px] p-2 overflow-x-auto">
+          The rise of RESTful APIs has been met by a rise in tools for creating,
+          testing, and managing them.The rise of RESTful APIs has been met by a
+          rise in tools for creating, testing, and managing them.The rise of
+          RESTful APIs has been met by a rise in tools for creating, testing,
+          and managing them.The rise of RESTful APIs has been met by a rise in
+          tools for creating, testing, and managing them.The rise of RESTful
+          APIs has been met by a rise in tools for creating, testing, and
+          managing them.The rise of RESTful APIs has been met by a rise in tools
+          for creating, testing, and managing them.The rise of RESTful APIs has
+          been met by a testing, and managing them.The rise of RESTful APIs has
+          been met by a rise in tools for creating, testing, and managing
+          them.The rise of RESTful APIs has been met by a rise in tools for
+          creating, testing, and managing them.The rise of RESTful APIs has been
+          met by a rise in tools for creating, testing, and managing them.The
+          rise of RESTful APIs has been met by a rise in tools for creating,
+          testing, and managing them.The rise of RESTful APIs has been met by a
+          rise in tools for creating, testing, and managing them.The rise of
+          RESTful APIs has been met by a testing, and managing them.The rise of
+          RESTful APIs has been met by a rise in tools for creating, testing,
+          and managing them.The rise of RESTful APIs has been met by a rise in
+          tools for creating, testing, and managing them.The rise of RESTful
+          APIs has been met by a rise in tools for creating, testing, and
+          managing them.The rise of RESTful APIs has been met by a rise in tools
+          for creating, testing, and managing them.The rise of RESTful APIs has
+          been met by a rise in tools for creating, testing, and managing
+          them.The rise of RESTful APIs has been met by a rise in tools for
+          creating, testing, and
+        </div>
       </div>
     </div>
   )
