@@ -13,7 +13,7 @@ interface RouteConfig {
 
 const routes: RouteConfig[] = [
   {
-    path: '/',
+    path: '/:page?/:postID?',
     name: 'Home',
     Component: LazyHome,
     exact: true,
