@@ -1,9 +1,10 @@
 export interface Post {
   id?: string
+  order?: number
   title: string
   summary: string
   mainContent: string
-  picture: string
+  image: string
   author: string
   date: Date
   jobTitle: string

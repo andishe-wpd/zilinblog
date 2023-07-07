@@ -11,16 +11,17 @@ const PostCard: FC<Post> = ({
   summary,
   author,
   mainContent,
-  picture,
   date,
   jobTitle,
+  order,
+  image,
 }) => {
   const navigate = useNavigate()
   const params = useParams()
   return (
     <section className="relative max-w-[326px] mx-auto">
-      <figure className="relative">
-        <LazyLoadImage picture={picture} />
+      <figure className="relative ">
+        {image ? <LazyLoadImage picture={image} /> : null}
         <div className="absolute gradient-glass-card">
           <div className="flex flex-col text-sm">
             <span className="font-semibold">{author}</span>
@@ -34,7 +35,7 @@ const PostCard: FC<Post> = ({
         <div className="text-textSecondary">{summary}</div>
       </div>
       <Link
-        to={'/' + (params?.page || '1') + '/5'}
+        to={'/' + (params?.page || '1') + '/' + order}
         className="text-primary font-semibold absolute bottom-0"
       >
         <div className="flex gap-2 items-center">

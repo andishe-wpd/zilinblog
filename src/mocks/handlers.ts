@@ -13,8 +13,8 @@ const generatePosts = (count: number): Post[] => {
       author: faker.person.fullName(),
       date: faker.date.past(),
       summary: faker.lorem.words(20),
-      mainContent: faker.lorem.sentences(10),
-      picture: faker.image.url({ width: 325, height: 245 }),
+      mainContent: faker.lorem.words(60),
+      image: faker.image.url(),
       jobTitle: faker.person.jobType(),
     })
   }
