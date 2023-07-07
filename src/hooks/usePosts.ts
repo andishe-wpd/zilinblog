@@ -6,7 +6,7 @@ const apiClient = new APIClient<PostResponse>('/posts')
 
 const usePosts = (slug: string) =>
   useQuery({
-    queryKey: ['posts'],
+    queryKey: ['posts', slug],
     queryFn: () => apiClient.get(slug),
     // staleTime: ms('24h'),
   })
