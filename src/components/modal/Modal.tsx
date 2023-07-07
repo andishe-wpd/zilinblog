@@ -21,14 +21,14 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
 
     if (isOpen) {
       setIsAnimating(true)
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden'
       document.addEventListener('keydown', handleKeyPress)
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = 'auto'
     }
 
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = 'auto'
       document.removeEventListener('keydown', handleKeyPress)
     }
   }, [isOpen, onClose])
