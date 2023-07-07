@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { PostImageProps } from '@interfaces/PostImageProps'
 
-const LazyLoadImage: React.FC<PostImageProps> = ({ picture }) => {
+const LazyLoadImage: React.FC<PostImageProps> = ({ picture,className }) => {
   const [loading, setLoading] = useState<boolean>(true)
   const [currentImage, setCurrentImage] = useState<string>('/samplepost.jpg') // replace this with your placeholder image path
 
@@ -17,11 +17,11 @@ const LazyLoadImage: React.FC<PostImageProps> = ({ picture }) => {
 
   return (
     <div
-      className={`transition-opacity duration-500 ${
+      className={`transition-opacity duration-500 m-0 ${
         loading ? 'opacity-50' : 'opacity-100'
       }`}
     >
-      <img src={currentImage} alt="" />
+      <img className={className} src={currentImage} alt="" />
     </div>
   )
 }
