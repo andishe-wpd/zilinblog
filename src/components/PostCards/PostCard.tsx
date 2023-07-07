@@ -2,7 +2,7 @@ import Button from '@components/button/Button'
 import samplepost from '/samplepost.png'
 import ArrowIcon from '@assets/icons/ArrowIcon'
 import { useNavigate, useParams } from 'react-router-dom'
-
+import Link from '@components/link/Link'
 const PostCard = () => {
   const navigate = useNavigate()
   const params = useParams()
@@ -26,12 +26,15 @@ const PostCard = () => {
           testing, and managing them.
         </div>
       </div>
-      <Button
-        title={'Read post'}
-        className="flex-row-reverse text-primary hover:bg-transparent"
-        icon={<ArrowIcon className="transform rotate-135" stroke="#175CD3" />}
-        onClickAction={() => navigate('/' + (params?.page || '1') + '/5')}
-      />
+      <Link
+        to={'/' + (params?.page || '1') + '/5'}
+        className="text-primary font-semibold"
+      >
+        <div className="flex gap-2 items-center">
+          Read post
+          <ArrowIcon className="transform rotate-135" stroke="#175CD3" />
+        </div>
+      </Link>
     </section>
   )
 }
