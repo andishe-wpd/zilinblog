@@ -1,4 +1,4 @@
-import samplepost from '/samplepost.png'
+import samplepost from '/samplepost.jpg'
 const PostCardDetail = () => {
   return (
     <div className="flex   flex-col md:flex-row max-h-[90vh] mx-auto  md:max-w-screen-lg shadow-lg  rounded-lg bg-white">
