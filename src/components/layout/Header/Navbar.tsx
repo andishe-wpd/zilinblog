@@ -12,7 +12,7 @@ const Navbar = () => {
     setIsSideMenuOpen(!isSideMenuOpen)
   }
   return (
-    <div className="flex-wrap-between-center gap-4 w-full sm:w-auto my-4 sm:my-auto">
+    <nav className="flex-wrap-between-center gap-4 w-full sm:w-auto my-4 sm:my-auto">
       <div className="cursor-pointer" onClick={() => navigate('/')}>
         <BrandIcon />
       </div>
@@ -36,7 +36,7 @@ const Navbar = () => {
         isOpen={isSideMenuOpen}
         onClose={() => setIsSideMenuOpen(false)}
       />
-    </div>
+    </nav>
   )
 }
 

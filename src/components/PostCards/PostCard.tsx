@@ -8,8 +8,8 @@ const PostCard = () => {
   const params = useParams()
 
   return (
-    <div className="max-w-[326px] mx-auto">
-      <div className="relative">
+    <section className="max-w-[326px] mx-auto">
+      <figure className="relative">
         <img src={samplepost} alt="" />
         <div className="absolute gradient-glass-card">
           <div className="flex flex-col text-sm">
@@ -18,13 +18,13 @@ const PostCard = () => {
           </div>
           <span className="font-semibold">Developer</span>
         </div>
-      </div>
+      </figure>
       <div className="py-8">
         <div className="font-semibold text-2xl">Building your API Stack</div>
-        <div className="text-textSecondary">
+        <summary className="text-textSecondary">
           The rise of RESTful APIs has been met by a rise in tools for creating,
           testing, and managing them.
-        </div>
+        </summary>
       </div>
       <Button
         title={'Read post'}
@@ -32,7 +32,7 @@ const PostCard = () => {
         icon={<ArrowIcon className="transform rotate-135" stroke="#175CD3" />}
         onClickAction={() => navigate('/' + (params?.page || '1') + '/5')}
       />
-    </div>
+    </section>
   )
 }
 
