@@ -6,7 +6,7 @@ import LazyLoadImage from '@components/lazyLoadImage/lazyLoadImage'
 const PostCardDetail: FC<{ content: Post }> = ({ content }) => {
   return (
     <div className="flex flex-col md:flex-row max-h-[90vh] mx-auto  md:max-w-screen-lg shadow-lg  rounded-lg bg-white">
-      <div className="relative w-full h-full sm:min-h-[80vh] md:w-12/12 lg:w-8/12 xl:w-2/3">
+      <div className="relative w-full h-full  md:w-12/12 lg:w-8/12 xl:w-2/3">
         <LazyLoadImage
           className={'w-full h-full object-cover rounded-l-lg'}
           picture={content.image}
