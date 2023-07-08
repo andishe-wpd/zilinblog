@@ -20,7 +20,7 @@ const PostCard: FC<Post> = ({
   const params = useParams()
   return (
     <section className="relative max-w-[326px] mx-auto">
-      <figure className="relative ">
+      <figure className="relative min-h-[300px]">
         {image ? <LazyLoadImage picture={image} /> : null}
         <div className="absolute gradient-glass-card">
           <div className="flex flex-col text-sm">
