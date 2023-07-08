@@ -1,4 +1,3 @@
-import samplepost from '/samplepost.jpg'
 import { FC } from 'react'
 import { Post } from '@interfaces/Post'
 import SpokenDate from '@components/utils/SpokenDate'
