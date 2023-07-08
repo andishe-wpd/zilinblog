@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import IconImage from './IconImage'
 import { SideMenuProps } from '@interfaces/SideMenuProps'
 import { NavbarItem } from '@interfaces/NavbarItem'
-
+import Button from '@components/button/Button'
 const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
   const navigate = useNavigate()
   return (
@@ -28,13 +28,14 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
           <IconImage />
         </div>
         {navBarItems.map((item: NavbarItem) => (
-          <a
-            href={item.path}
-            key={item.title}
-            className="block px-4 py-2 text-black hover:bg-blue-50 transition-all"
-          >
-            {item.title}
-          </a>
+          <div>
+            <Button
+              title={item.title}
+              key={item.title}
+              onClickAction={() => navigate(item.path)}
+              className="text-secondary"
+            />
+          </div>
         ))}
       </aside>
     </>
