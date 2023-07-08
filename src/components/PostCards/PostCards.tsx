@@ -7,7 +7,6 @@ import { useEffect } from 'react'
 const PostCards = () => {
   const navigate = useNavigate()
   const params = useParams()
-  console.log(params)
   const {
     data: posts,
     isLoading,
