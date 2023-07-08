@@ -1,11 +1,18 @@
-import React, { useRef } from 'react'
+import React, { ChangeEvent, useRef } from 'react'
 import { CustomInputProps } from '@interfaces/CustomInputProps'
-const CustomInput: React.FC<CustomInputProps> = ({
+import useStore from '../../store/store'
+const SearchInput: React.FC<CustomInputProps> = ({
   icon,
   placeholder,
   onEnter,
   className,
 }) => {
+  const setSearchValue = useStore(state => state.setSearchValue)
+  const handleSearchInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const searchValue = event.target.value
+    setSearchValue(searchValue)
+  }
+
   const inputRef = useRef<HTMLInputElement>(null)
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -24,7 +31,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
 
   return (
     <div
-      className={`border py-3 px-4 rounded-lg flex gap-2 cursor-pointer ${className} hover:border-black transition-all`}
+      className={`border py-3 px-4 rounded-lg flex gap-2 cursor-pointer hover:border-black transition-all ${className}`}
       onClick={handleDivClick}
     >
       {icon && icon}
@@ -34,10 +41,11 @@ const CustomInput: React.FC<CustomInputProps> = ({
           ref={inputRef}
           placeholder={placeholder}
           className="focus:outline-none cursor-pointer"
+          onChange={handleSearchInputChange}
         />
       </form>
     </div>
   )
 }
 
-export default CustomInput
+export default SearchInput
