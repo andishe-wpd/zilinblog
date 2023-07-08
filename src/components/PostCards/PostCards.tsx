@@ -4,11 +4,16 @@ import { useNavigate, useParams } from 'react-router-dom'
 import PostCardDetail from './PostCardDetail'
 import usePosts from '../../hooks/usePosts'
 import { useEffect } from 'react'
+import useStore from '../../store/store'
+import { Post } from '@interfaces/Post'
 const PostCards = () => {
   const navigate = useNavigate()
   const params = useParams()
+  const posts = useStore(state => state.posts)
+  const setPosts = useStore(state => state.setPosts)
+  const searchValue = useStore(state => state.searchValue)
   const {
-    data: posts,
+    data: fetchedPosts,
     isLoading,
     isSuccess,
     error,
@@ -17,14 +22,22 @@ const PostCards = () => {
   useEffect(() => {
     refetch()
   }, [params])
+  useEffect(() => {
+    if (isSuccess) {
+      const filteredPosts = fetchedPosts?.content?.filter((post: Post) =>
+        post.title.includes(searchValue),
+      )
+      setPosts(filteredPosts)
+    }
+  }, [fetchedPosts, searchValue, setPosts])
 
   const postIndex = params?.postID ? parseInt(params.postID) - 1 : -1
-  const postContent = posts?.content?.[postIndex]
+  const postContent = fetchedPosts?.content?.[postIndex]
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-6 pb-12 max-w-[1600px] mx-auto">
       {isSuccess
-        ? posts.content.map(
+        ? posts.map(
             (
               {
                 id,
