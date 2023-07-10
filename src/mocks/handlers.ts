@@ -2,7 +2,7 @@
 import { rest } from 'msw'
 import { faker } from '@faker-js/faker'
 import { Post } from '@interfaces/ApiResponse'
-import {AuthResponse} from '@interfaces/ApiResponse'
+import { AuthResponse } from '@interfaces/ApiResponse'
 
 const mockUserState: AuthResponse = {
   authenticated: true,
