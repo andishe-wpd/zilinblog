@@ -3,7 +3,7 @@ import { navBarItems } from '../../../constants/navBarItems'
 import BrandIcon from '@assets/icons/BrandIcon'
 import { useNavigate } from 'react-router-dom'
 import UserProfile from './UserProfile'
-import { SideMenuProps } from '@interfaces/SideMenuProps'
+import { SideMenuProps } from '@interfaces/PropTypes'
 import { NavbarItem } from '@interfaces/NavbarItem'
 import Button from '@components/button/Button'
 const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {

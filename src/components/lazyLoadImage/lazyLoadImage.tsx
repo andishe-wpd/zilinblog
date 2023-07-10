@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { PostImageProps } from '@interfaces/PostImageProps'
+import { PostImageProps } from '@interfaces/PropTypes'
 
 const LazyLoadImage: React.FC<PostImageProps> = ({ picture,className }) => {
   const [loading, setLoading] = useState<boolean>(true)

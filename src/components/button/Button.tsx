@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { ButtonProps } from '@interfaces/ButtonProps'
+import { ButtonProps } from '@interfaces/PropTypes'
 
 const Button: FC<ButtonProps> = ({
   title,

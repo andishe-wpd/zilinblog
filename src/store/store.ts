@@ -1,6 +1,6 @@
 // store.ts
 import { create } from 'zustand'
-import { Post } from '@interfaces/Post'
+import { Post } from '@interfaces/ApiResponse'
 type Store = {
   posts: Post[]
   setPosts: (data: Post[]) => void

@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query'
 import APIClient from '../services/api-client'
-
+import {AuthResponse} from '@interfaces/ApiResponse'
 const apiClient = new APIClient<AuthResponse>('/login')
 
 const useLogin = () => {
@@ -19,27 +19,3 @@ const useLogin = () => {
 
 export default useLogin
 
-interface Credentials {
-  username: string
-  password: string
-}
-
-interface AuthResponse {
-  authenticated: boolean
-  token: string
-  message: string
-  name: string
-  avatar: string
-}
-
-export interface Post {
-  id?: string
-  order?: number
-  title: string
-  summary: string
-  mainContent: string
-  image: string
-  author: string
-  date: Date
-  jobTitle: string
-}

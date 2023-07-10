@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useRef } from 'react'
-import { CustomInputProps } from '@interfaces/CustomInputProps'
+import { CustomInputProps } from '@interfaces/PropTypes'
 import useStore from '../../store/store'
 const SearchInput: React.FC<CustomInputProps> = ({
   icon,

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import ReactDOM from 'react-dom'
 import Button from '@components/button/Button'
 import CloseIcon from '@assets/icons/CloseIcon'
-import { ModalProps } from '@interfaces/ModalProps'
+import { ModalProps } from '@interfaces/PropTypes'
 
 const Modal: React.FC<ModalProps> = ({
   isOpen,

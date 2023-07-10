@@ -1,17 +1,10 @@
 // mocks/handlers.ts
 import { rest } from 'msw'
 import { faker } from '@faker-js/faker'
-import { Post } from '@interfaces/Post'
+import { Post } from '@interfaces/ApiResponse'
+import {AuthResponse} from '@interfaces/ApiResponse'
 
-type UserState = {
-  authenticated: boolean
-  token: string
-  message: string
-  name: string
-  avatar: string
-}
-
-const mockUserState: UserState = {
+const mockUserState: AuthResponse = {
   authenticated: true,
   token: 'some-mock-token',
   message: 'Logged in',
