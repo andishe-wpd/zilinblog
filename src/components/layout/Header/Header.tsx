@@ -12,7 +12,7 @@ const Header = () => {
           icon={<SearchIcon />}
           className="max-w-[600px] w-full"
         />
-        <UserProfile className="hidden lg:block" />
+        <UserProfile className="hidden sm:block" />
       </div>
     </header>
   )
