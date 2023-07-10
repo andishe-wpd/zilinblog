@@ -1,8 +1,17 @@
 // mocks/handlers.ts
 import { rest } from 'msw'
 import { faker } from '@faker-js/faker'
-import { Post } from '@interfaces/Post'
+import { Post } from '@interfaces/ApiResponse'
+import {AuthResponse} from '@interfaces/ApiResponse'
 
+const mockUserState: AuthResponse = {
+  authenticated: true,
+  token: 'some-mock-token',
+  message: 'Logged in',
+  name: faker.person.fullName(),
+  avatar:
+    'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/51.jpg',
+}
 const generatePosts = (count: number): Post[] => {
   const posts: Post[] = []
 
@@ -40,5 +49,46 @@ export const handlers = [
     }
 
     return res(ctx.json(response))
+  }),
+
+  rest.post('http://localhost:3000/api/login', (req, res, ctx) => {
+    const { username, password } = req.body as {
+      username: string
+      password: string
+    }
+    if (username === 'admin' && password === 'admin') {
+      return res(
+        ctx.status(200),
+        ctx.json({
+          authenticated: true,
+          token: 'some-mock-token',
+          message: 'Logged in',
+          name: faker.person.fullName(),
+          avatar: mockUserState.avatar,
+        }),
+      )
+    } else {
+      return res(
+        ctx.status(401),
+        ctx.json({
+          authenticated: false,
+          message: 'Invalid username or password',
+        }),
+      )
+    }
+  }),
+
+  rest.get('http://localhost:3000/api/user', (req, res, ctx) => {
+    const token = req.headers.get('Authorization')
+    if (token === mockUserState.token) {
+      return res(ctx.status(200), ctx.json(mockUserState))
+    } else {
+      return res(
+        ctx.status(401),
+        ctx.json({
+          message: 'Invalid token',
+        }),
+      )
+    }
   }),
 ]

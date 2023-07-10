@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useRef } from 'react'
-import { CustomInputProps } from '@interfaces/CustomInputProps'
+import { CustomInputProps } from '@interfaces/PropTypes'
 import useStore from '../../store/store'
 const SearchInput: React.FC<CustomInputProps> = ({
   icon,
@@ -15,13 +15,6 @@ const SearchInput: React.FC<CustomInputProps> = ({
 
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    if (onEnter) {
-      console.log(inputRef?.current?.value)
-    }
-  }
-
   const handleDivClick = () => {
     // focus the input when the parent div is clicked
     if (inputRef.current) {
@@ -35,15 +28,13 @@ const SearchInput: React.FC<CustomInputProps> = ({
       onClick={handleDivClick}
     >
       {icon && icon}
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          ref={inputRef}
-          placeholder={placeholder}
-          className="focus:outline-none cursor-pointer"
-          onChange={handleSearchInputChange}
-        />
-      </form>
+      <input
+        type="text"
+        ref={inputRef}
+        placeholder={placeholder}
+        className="focus:outline-none cursor-pointer"
+        onChange={handleSearchInputChange}
+      />
     </div>
   )
 }

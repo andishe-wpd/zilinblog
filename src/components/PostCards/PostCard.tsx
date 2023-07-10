@@ -2,7 +2,7 @@ import ArrowIcon from '@assets/icons/ArrowIcon'
 import LazyLoadImage from '@components/lazyLoadImage/lazyLoadImage'
 import Link from '@components/link/Link'
 import SpokenDate from '@components/utils/SpokenDate'
-import { Post } from '@interfaces/Post'
+import { Post } from '@interfaces/ApiResponse'
 import { FC } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
