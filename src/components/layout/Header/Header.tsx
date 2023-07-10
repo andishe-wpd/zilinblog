@@ -1,7 +1,7 @@
 import Navbar from '@components/layout/Header/Navbar'
 import SearchInput from '@components/SearchInput/SearchInput'
 import SearchIcon from '../../../assets/icons/SearchIcon'
-import IconImage from '@components/layout/Header/IconImage'
+import UserProfile from '@components/layout/Header/UserProfile'
 const Header = () => {
   return (
     <header className="py-4 px-8 border-b flex-wrap-between-center">
@@ -10,9 +10,9 @@ const Header = () => {
         <SearchInput
           placeholder="search"
           icon={<SearchIcon />}
-          className="max-w-[649px] w-full"
+          className="max-w-[600px] w-full"
         />
-        <IconImage className="hidden lg:block" />
+        <UserProfile className="hidden lg:block" />
       </div>
     </header>
   )

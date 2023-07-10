@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { navBarItems } from '../../../constants/navBarItems'
 import BrandIcon from '@assets/icons/BrandIcon'
 import { useNavigate } from 'react-router-dom'
-import IconImage from './IconImage'
+import UserProfile from './UserProfile'
 import { SideMenuProps } from '@interfaces/SideMenuProps'
 import { NavbarItem } from '@interfaces/NavbarItem'
 import Button from '@components/button/Button'
@@ -25,7 +25,7 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
             className="cursor-pointer py-2"
             onClick={() => navigate('/')}
           />
-          <IconImage />
+          <UserProfile />
         </div>
         {navBarItems.map((item: NavbarItem) => (
           <div>
