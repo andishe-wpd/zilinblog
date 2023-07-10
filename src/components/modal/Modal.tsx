@@ -4,7 +4,12 @@ import Button from '@components/button/Button'
 import CloseIcon from '@assets/icons/CloseIcon'
 import { ModalProps } from '@interfaces/ModalProps'
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
+const Modal: React.FC<ModalProps> = ({
+  isOpen,
+  onClose,
+  children,
+  className,
+}) => {
   const [isAnimating, setIsAnimating] = useState(false)
   const modalRef = useRef<HTMLDivElement>(null)
 
@@ -46,13 +51,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
       />
       <div
         ref={modalRef}
-        className={`relative  w-[1080px] rounded-lg transform ${
+        className={`relative rounded-lg transform ${
           isAnimating ? 'scale-100' : 'scale-95'
-        } transition-transform duration-300`}
+        } transition-transform duration-300 ${className}`}
       >
         <Button
           icon={<CloseIcon />}
-          className="absolute top-0 left-6 m-4 z-30"
+          className="absolute top-0 left-[5px] m-4 z-30"
           onClickAction={onClose}
         />
         {children}
