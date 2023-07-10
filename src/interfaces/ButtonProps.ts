@@ -3,6 +3,6 @@ export interface ButtonProps {
   icon?: React.ReactNode
   className?: string
   isActive?: boolean
-  onClickAction?: () => void
+  onClickAction?: any
   disabled?: boolean
 }
