@@ -5,7 +5,7 @@ import AppRouter from './router/AppRouter'
 import profileStore from './store/profileStore'
 
 function App() {
-  const token = window.localStorage.getItem('token') || ''
+  const token = localStorage.getItem('token') || ''
   const { isLoading, isError, data } = useTokenValidator({ token })
   const setUser = profileStore(state => state.setUser)
   const clearUser = profileStore(state => state.clearUser)
