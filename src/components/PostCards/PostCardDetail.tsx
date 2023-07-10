@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Post } from '@interfaces/Post'
+import { Post } from '@interfaces/ApiResponse'
 import SpokenDate from '@components/utils/SpokenDate'
 import LazyLoadImage from '@components/lazyLoadImage/lazyLoadImage'
 const PostCardDetail: FC<{ content: Post }> = ({ content }) => {

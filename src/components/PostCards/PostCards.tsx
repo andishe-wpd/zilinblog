@@ -5,7 +5,7 @@ import PostCardDetail from './PostCardDetail'
 import usePosts from '../../hooks/usePosts'
 import { useEffect } from 'react'
 import useStore from '../../store/store'
-import { Post } from '@interfaces/Post'
+import { Post } from '@interfaces/ApiResponse'
 const PostCards = () => {
   const navigate = useNavigate()
   const params = useParams()
