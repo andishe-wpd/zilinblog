@@ -83,7 +83,7 @@ const Pagination: React.FC<PaginationProps> = ({
       <Button
         title="Next"
         onClickAction={onNextPage}
-        disabled={currentPage === 1}
+        disabled={currentPage === (pages.length || 10)}
         className="flex-row-reverse text-secondary"
         icon={<ArrowIcon className="trasform rotate-180" />}
       />

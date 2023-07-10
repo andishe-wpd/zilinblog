@@ -6,12 +6,9 @@ const UserProfile: FC<{ className?: string }> = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false)
   const { avatar, authenticated } = profileStore(state => state)
   return (
-    <div className={`cursor-pointer ${className}`}>
+    <div className={className}>
       {authenticated ? (
-        <div
-          className={`cursor-pointer ${className}`}
-          onClick={() => setIsOpen(true)}
-        >
+        <div className={className}>
           <img width={40} className="rounded-full" src={avatar} />
         </div>
       ) : (

@@ -8,7 +8,7 @@ const usePosts = (slug: string) =>
   useQuery({
     queryKey: ['posts', slug],
     queryFn: () => apiClient.get(slug),
-    // staleTime: ms('24h'),
+    staleTime: 1000 * 60 * 60,
   })
 
 export default usePosts
