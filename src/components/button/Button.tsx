@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { ButtonProps } from '@interfaces/ButtonProps'
+
 const Button: FC<ButtonProps> = ({
   title,
   icon,
@@ -9,17 +10,18 @@ const Button: FC<ButtonProps> = ({
   disabled = false,
 }) => {
   return (
-    <div
-      className={`custom-button p-3 ${className} ${
-        isActive ? 'text-primary bg-blue-50' : null
-      } ${disabled ? 'cursor-not-allowed' : null}`}
+    <button
+      type="submit"
+      className={`custom-button p-3  ${className} ${
+        isActive ? 'text-primary bg-blue-50' : ''
+      } ${disabled ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
       onClick={() => {
-        if (onClickAction) onClickAction()
+        if (!disabled && onClickAction) onClickAction()
       }}
     >
       {icon && <span className="button-icon">{icon}</span>}
       {title}
-    </div>
+    </button>
   )
 }
 
